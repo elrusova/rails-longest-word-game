@@ -1,0 +1,14 @@
+<div class="ms-3">
+<h1>New game</h1>
+<p name="letters">Here is your grid: <%= @letters %></p>
+<div class="mb-3 pb-3">
+<form action="score" data-turbo="false" style="width: 30%">
+  <label for="answer" class="form-label">What is the longest word you can find?</label>
+  <div id="input">
+  <input type="text" name="word" class="form-control">
+  <input type="submit" value="Play" class="btn btn-primary">
+  </div>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
+</div>
+</div>
